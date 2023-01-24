@@ -1,0 +1,108 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+main .intro-container {
+  width: 40%;
+  background-color: hsl(0deg, 0%, 26%);
+  box-sizing: border-box;
+  padding: 2vh;
+  position: absolute;
+  top: 300px;
+  -webkit-box-shadow: 1px 3px 29px 5px rgbargb(32, 32, 32);
+  -moz-box-shadow: 1px 3px 29px 5px rgbargb(32, 32, 32);
+  box-shadow: 1px 3px 29px 5px rgb(32, 32, 32);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+}
+main .intro-container p {
+  margin: 0.5em auto;
+}
+main .food-list {
+  list-style: none;
+  width: 60%;
+  position: absolute;
+  top: 600px;
+  padding: 0;
+}
+main .food-list .food-card {
+  width: 100%;
+  height: 120px;
+  background-color: hsl(0deg, 0%, 100%);
+  box-sizing: border-box;
+  padding: 2vh;
+  display: flex;
+  justify-content: space-between;
+}
+main .food-list .food-card .food-info {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+main .food-list .food-card .food-info .food-name {
+  font-size: 1.2rem;
+  margin: 0.2em;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+main .food-list .food-card .food-info .food-description {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0.2em;
+  font-family: "Nunito", sans-serif;
+}
+main .food-list .food-card .food-info .food-price {
+  font-size: 1.2rem;
+  margin: 0.2em;
+  font-family: "Nunito", sans-serif;
+  color: rgb(191, 147, 2);
+  font-weight: 600;
+}
+main .food-list .food-card .food-info .card-round-top {
+  border-radius: 15px 15px 0 0;
+}
+main .food-list .food-card .food-info .card-round-bottom {
+  border-radius: 0 0 15px 15px;
+}
+main .food-list .food-card .food-add {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+main .food-list .food-card .food-add .amount-input {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+}
+main .food-list .food-card .food-add .amount-input input {
+  width: 20px;
+  margin-left: 1em;
+}
+main .food-list .food-card .food-add .amount-input input::-webkit-outer-spin-button,
+main .food-list .food-card .food-add .amount-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .food-list .food-card .food-add .amount-input input[type=number] {
+  -moz-appearance: textfield;
+}
+main .food-list .food-card .food-add .amount-input label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+main .food-list .food-card .food-add button {
+  width: 80%;
+  height: 40px;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */

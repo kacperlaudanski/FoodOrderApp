@@ -1,0 +1,104 @@
+
+$main-color: #8a2b06;
+$white : hsl(0, 0%, 100%); 
+$header-font: 'Ubuntu', sans-serif;
+$second-font: 'Nunito', sans-serif;
+
+.cart-container{
+    width:50%; 
+    background-color: $white;
+    border-radius: 15px; 
+    box-sizing: border-box;
+    padding:2vh; 
+    position: fixed;
+    left: 25%;
+    top:30%;
+    z-index: 5;
+
+    .cart-element{
+        width:100%; 
+        height:120px;
+        border-bottom: 2px solid $main-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .food-info{
+            width:25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: $second-font;
+
+            .food-price{
+                color: rgb(191, 147, 2);
+                font-weight: bold;
+            }
+        }
+
+        .counter {
+            width: 10%; 
+            height: 30px;
+            border-radius: 5px;
+            background-color: $white;
+            border: 1px solid $main-color; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: $second-font;
+        }
+
+        .buttons{
+            width:25%; 
+            display: flex;
+            justify-content: flex-end;
+
+
+            .cart-counter-button{
+                width:25%; 
+                height: 30px;
+                border-radius: 5px;
+                background-color: $white;
+                border: 1px solid $main-color; 
+                margin: .1em;
+                color:$main-color;
+            }
+        }
+    }
+
+    .cart-summary{
+        width:100%; 
+        height:120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2{
+            font-family: $second-font;
+        }
+    }
+
+    .cart-handling-buttons{
+        width:100%; 
+        display: flex;
+        justify-content: flex-end;
+
+        .close-button{
+            width:17%;
+            height:35px;
+            font-size: 1rem;
+            border: 1px solid $main-color;
+            background-color: $white;
+            color:$main-color;
+        }
+
+        .order-button{
+            width:17%;
+            height:35px;
+            margin-left:.5em;
+            font-size: 1rem;
+        }
+    }
+}
+

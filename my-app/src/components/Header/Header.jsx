@@ -7,7 +7,9 @@ const Header = (props) => {
         <>
          <header>
             <h1>ReactFood</h1>
-            <CartButton />
+            <CartButton 
+                cartButtonHandler = {props.cartButtonHandler}
+            />
          </header>
         </>
     )
