@@ -1,3 +1,98 @@
-
+.cart-container {
+  width: 50%;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 2vh;
+  overflow-y: scroll;
+  max-height: 400px;
+  z-index: 5;
+}
+.cart-container .cart-element {
+  width: 100%;
+  height: 120px;
+  border-bottom: 2px solid #8a2b06;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-container .cart-element .food-info {
+  min-width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+}
+.cart-container .cart-element .food-info .food-price {
+  color: rgb(191, 147, 2);
+  font-weight: bold;
+}
+.cart-container .cart-element .counter {
+  width: 10%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: hsl(0deg, 0%, 100%);
+  border: 1px solid #8a2b06;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+}
+.cart-container .cart-element .buttons {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+.cart-container .cart-element .buttons .cart-counter-button {
+  width: 25%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: hsl(0deg, 0%, 100%);
+  border: 1px solid #8a2b06;
+  margin: 0.1em;
+  color: #8a2b06;
+}
+.cart-container .cart-summary {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-container .cart-summary h2 {
+  font-family: "Nunito", sans-serif;
+}
+.cart-container .cart-handling-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.cart-container .cart-handling-buttons .close-button {
+  width: 17%;
+  height: 35px;
+  font-size: 1rem;
+  border: 1px solid #8a2b06;
+  background-color: hsl(0deg, 0%, 100%);
+  color: #8a2b06;
+}
+.cart-container .cart-handling-buttons .close-button:hover {
+  background-color: #4d1601;
+  color: hsl(0deg, 0%, 100%);
+  transition: linear 0.3s;
+}
+.cart-container .cart-handling-buttons .order-button {
+  width: 17%;
+  height: 35px;
+  margin-left: 0.5em;
+  font-size: 1rem;
+}
+.cart-container .cart-handling-buttons .order-button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: #4d1601;
+  transition: linear 0.3s;
+  border: 1px solid #8a2b06;
+  color: #8a2b06;
+}
 
 /*# sourceMappingURL=cart.css.map */

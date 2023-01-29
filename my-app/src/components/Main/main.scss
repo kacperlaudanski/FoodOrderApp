@@ -1,7 +1,9 @@
 $background-color: hsl(0, 0%, 26%);
 $white: hsl(0,0%,100%); 
+$main-color: #8a2b06;
 $header-font: 'Ubuntu', sans-serif;
 $second-font: 'Nunito', sans-serif;
+$button-color: #4d1601;
 
 main {
     display: flex;
@@ -91,18 +93,9 @@ main {
                 box-sizing: border-box;
 
                 input {
-                    width:20px;
+                    width:30px;
+                    height:20px;
                     margin-left:1em;
-                }
-
-                input::-webkit-outer-spin-button,
-                input::-webkit-inner-spin-button {
-                  -webkit-appearance: none;
-                  margin: 0;
-                }
-
-                input[type=number] {
-                  -moz-appearance: textfield;
                 }
 
                 label{
@@ -115,6 +108,13 @@ main {
                 width:80%;
                 height:40px; 
                 font-size: 1rem;
+              }
+
+              button:hover{
+                background-color: $white;
+                border: 2px solid $button-color;
+                transition: linear .3s; 
+                color: $button-color; 
               }
             }
         }

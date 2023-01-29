@@ -3,11 +3,12 @@ $button-color: #4d1601;
 $font-color: hsl(0,0%,100%);
 $header-font: 'Ubuntu', sans-serif;
 $second-font: 'Nunito', sans-serif;
-/*$flex-setup: (
-    display:flex, 
-    align-items:center, 
-    justify-content:center
-);*/
+
+@mixin flex-set{
+    display:flex; 
+    align-items: center;
+    justify-content: center;
+}
     
 
 header {
@@ -16,9 +17,8 @@ header {
     background-color: $main-color;
     box-sizing: border-box;
     padding: 2vh 20vh;
-    display:flex; 
+    @include flex-set; 
     justify-content: space-between;
-    align-items: center;
     position: fixed;
     z-index: 1;
 
@@ -37,8 +37,7 @@ button{
     padding: 1vh;
     border-radius: 50px;
     border: none;
-    display:flex; 
-    align-items: center;
+    @include flex-set; 
     justify-content: space-around;
     font-size: 1.2rem;
     font-family: $second-font;
@@ -55,8 +54,28 @@ button{
         height:30px;
         background-color: $main-color;
         border-radius: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-set; 
     }
 }
+
+.bump {
+    animation: bump 300ms ease-out;
+  }
+  
+  @keyframes bump {
+    0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(0.9);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

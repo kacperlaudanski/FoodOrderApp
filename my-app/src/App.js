@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'; 
+import React, { useState, useRef, useContext } from 'react'; 
 import Header from './components/Header/Header';
 import './index.scss'
 import Meals from './images/meals.jpg'
@@ -8,7 +8,7 @@ import DUMMY_MEALS from './components/DummyData';
 import FoodList from './components/Main/FoodList';
 import FoodCard from './components/Main/FoodCard';
 import CartModule from './components/Cart/CartModule';
-import CartState from './components/state/cart-button-state';
+import CartStateProvider from './state/CartStateProvider';
 
 function App() {
 
@@ -26,19 +26,21 @@ function App() {
 
 
   return (
+   
     <div className="App">
-     <div className={`overlay ${!isClicked && 'hidden'}`}>
-      <CartModule 
-        closingHandler = {closingHandler}
-        className = {`cart-container ${!isClicked && 'hidden'}`}
-      /> 
-     </div>
+
+    <CartStateProvider>
       <Header 
         cartButtonHandler = {cartButtonHandler}
       /> 
+      <CartModule 
+        closingHandler = {closingHandler}
+        overlayClass = {`overlay ${!isClicked && 'hidden'}`}
+        cartClass = {`cart-container ${!isClicked && 'hidden'}`}
+      /> 
       <div className='image-box'>
          <img src={Meals} alt='meals-background' className='meals-img'></img>
-        {/* <div className='img-crop'></div> */}
+         <div className='img-crop'></div> 
       </div>
       <Main>
         <Intro /> 
@@ -47,6 +49,7 @@ function App() {
              return (
               <FoodCard 
                 key = {item.id}
+                id = {item.id}
                 foodName = {item.name}
                 foodDescription = {item.description}
                 foodPrice = {item.price}
@@ -57,7 +60,7 @@ function App() {
            })}
         </FoodList>
       </Main>
-      
+     </CartStateProvider>
     </div>
   );
 }

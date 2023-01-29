@@ -1,8 +1,16 @@
 
 $main-color: #8a2b06;
+$button-color: #4d1601;
 $white : hsl(0, 0%, 100%); 
 $header-font: 'Ubuntu', sans-serif;
 $second-font: 'Nunito', sans-serif;
+
+@mixin flex-set{
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+}
+
 
 .cart-container{
     width:50%; 
@@ -10,9 +18,8 @@ $second-font: 'Nunito', sans-serif;
     border-radius: 15px; 
     box-sizing: border-box;
     padding:2vh; 
-    position: fixed;
-    left: 25%;
-    top:30%;
+    overflow-y: scroll;
+    max-height: 400px;
     z-index: 5;
 
     .cart-element{
@@ -24,7 +31,7 @@ $second-font: 'Nunito', sans-serif;
         align-items: center;
 
         .food-info{
-            width:25%;
+            min-width:25%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -42,9 +49,7 @@ $second-font: 'Nunito', sans-serif;
             border-radius: 5px;
             background-color: $white;
             border: 1px solid $main-color; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-set; 
             font-weight: bold;
             font-family: $second-font;
         }
@@ -93,11 +98,25 @@ $second-font: 'Nunito', sans-serif;
             color:$main-color;
         }
 
+        .close-button:hover{
+            background-color: $button-color;
+            color:$white; 
+            transition: linear .3s;
+        }
+
         .order-button{
             width:17%;
             height:35px;
             margin-left:.5em;
             font-size: 1rem;
+        }
+
+        .order-button:hover{
+            background-color: $white;
+            color:$button-color; 
+            transition:linear .3s;
+            border: 1px solid $main-color; 
+            color:$main-color;
         }
     }
 }

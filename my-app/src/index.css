@@ -1,6 +1,38 @@
 body {
   margin: 0;
   background-color: hsl(0deg, 0%, 26%);
+  overflow-x: hidden;
+}
+body .image-box {
+  position: relative;
+  width: 100%;
+}
+body .image-box .meals-img {
+  width: 100%;
+  position: absolute;
+  top: -30px;
+}
+body .image-box .img-crop {
+  width: 300%;
+  height: 1000px;
+  position: absolute;
+  left: -100px;
+  top: 300px;
+  transform: rotate(-7deg);
+  background-color: hsl(0deg, 0%, 26%);
+}
+body .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.749);
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */
